@@ -1,3 +1,7 @@
+//
+// Created by ASUS on 9/13/2017.
+//
+
 #include <iostream>
 #include <list>
 #include <fstream>
@@ -163,22 +167,15 @@ bool existe(NodoNario* raiz,int buscado)
 //Busca el valor "buscado" en el arbol "raiz" y lo reemplaza con "reemplazo"
 void buscarYReemplazar(NodoNario* raiz, int buscado, int reemplazo)
 {
- /*  if(raiz == NULL)
-        return;
-    if(raiz -> valor == buscado){
-        raiz -> valor = reemplazo;
-    }else
+    if(raiz->valor == buscado)
+        raiz->valor = reemplazo;
+    else
     {
-        for(int hijo = 0; hijo < raiz -> hijos.size(); hijo ++){
-            bool b = existe(raiz -> hijos[hijo], buscado);
-            if(b){
-                raiz -> hijos[hijo] -> valor = reemplazo;
-            }
+        for(int i = 0; i < raiz->hijos.size(); i++){
+            buscarYReemplazar(raiz->hijos[i],buscado,reemplazo);
         }
     }
-    */
 }
-
 
 //Devuelve un vector que contenga la siguiente secuencia binaria:
 //00000001
